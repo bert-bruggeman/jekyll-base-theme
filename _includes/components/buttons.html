@@ -1,3 +1,7 @@
-{% for item in include.items %}
-<a class="button" href="{{ item.url }}">{{ item.title }}</a>
-{% endfor %}
+{% if include.items %}
+<div class="buttons">
+    {% for item in include.items %}
+    <a class="button" href="{{ item.url }}">{{ item.title }}</a>
+    {% endfor %}
+</div>
+{% endif %}

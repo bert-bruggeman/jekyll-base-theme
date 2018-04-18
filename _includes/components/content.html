@@ -1,0 +1,11 @@
+{% if include.item.size > 1 %}
+
+{% if include.class %}
+<div class="{{ include.class }}">
+    {{ include.item | markdownify | replace: "\", "<br />" }}
+</div>
+{% else %}
+    {{ include.item | markdownify | replace: "\", "<br />" }}
+{% endif %}
+
+{% endif %}

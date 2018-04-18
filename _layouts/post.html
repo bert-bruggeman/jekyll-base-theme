@@ -2,8 +2,23 @@
 layout: default
 ---
 
-<article>
-  <h2>{{ page.title }}</h2>
-  {{ content | replace: "\", "<br />" }}
-  {% include components/share.html %}
+{% include components/figure.html style="banner" image=page.banner.url id="banner" alt="Banner" %}
+
+{% if content.size > 1 %}
+<article class="post">
+
+    {% include components/image.html image=page.image.url style="card" alt=page.title %}
+
+    <div class="content">
+        {% include components/content.html item=content %}
+        {% include components/date.html date=page.date icon="time" %}
+    </div>
+
 </article>
+{% endif %}
+
+{% if page.includes %}
+{% for item in page.includes %}
+{% include sections/{{ item }}.html %}
+{% endfor %}
+{% endif %}
