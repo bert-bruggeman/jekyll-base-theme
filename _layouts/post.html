@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+<article>
+  <h2>{{ page.title }}</h2>
+  {{ content | replace: "\", "<br />" }}
+  {% include components/share.html %}
+</article>
