@@ -1,0 +1,27 @@
+@mixin position($position, $top, $right, $bottom, $left) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+
+@mixin frame($width, $height, $position: relative) {
+    position: $position;
+
+    &:before {
+        content: "";
+        display: block;
+        height: 0;
+        padding-bottom: $height / $width * 100%;
+    }
+
+}
+
+
+@mixin frame-ratio($width, $height) {
+    &:before {
+        padding-bottom: $height / $width * 100%;
+    }
+}

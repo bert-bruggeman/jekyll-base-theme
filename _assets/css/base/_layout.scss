@@ -1,0 +1,117 @@
+html {
+//        box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background: $base-background;
+    color: $color-text;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    font-weight: $base-font-weight;
+    line-height: $base-line-height;
+    letter-spacing: $base-letter-spacing;
+    margin: 0;
+    padding: $base-padding;
+    position: relative;
+    min-height: 100%;
+}
+/*
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+    font-family: $heading-font-family;
+    font-size: $heading-font-size;
+    line-height: $heading-line-height;
+    letter-spacing: $heading-letter-spacing;
+    margin: 0 0 $heading-margin;
+}
+
+blockquote,
+dl,
+dd,
+ol,
+p,
+table,
+ul {
+    margin: 0 0 $base-margin;
+}
+
+a {
+    background-color: transparent;
+    color: $color-highlight;
+    text-decoration-skip: ink;
+    text-decoration: none;
+    transition: color .2s ease-in-out;
+
+    &:hover {
+        color: $color-focus;
+    }
+
+    &:focus {
+       outline: none;
+    }
+}
+
+hr {
+    border-bottom: $base-border-size solid $color-border;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: $base-margin * 2 0;
+}
+
+strong {
+    font-weight: $base-font-weight-bold;
+}
+
+img {
+    border-style: none;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+}
+
+figure {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+dt {
+    font-weight: $base-font-weight-bold;
+    margin: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+%hidden {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    z-index: -1;
+}
+
+.hidden {
+    @extend %hidden;
+}
