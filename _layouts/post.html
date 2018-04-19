@@ -2,12 +2,12 @@
 layout: default
 ---
 
-{% include components/figure.html style="banner" image=page.banner.url id="banner" alt="Banner" %}
+{% include components/figure.html style="banner" image=page.banner.url id="banner" alt=page.banner.alt caption=page.banner.caption %}
 
 {% if content.size > 1 %}
 <article class="post">
 
-    {% include components/image.html image=page.image.url style="card" alt=page.title %}
+    {% include components/figure.html style="card" image=page.image.url alt=page.image.alt caption=page.image.caption %}
 
     <div class="content">
         {% include components/content.html item=content %}

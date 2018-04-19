@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include components/figure.html style="banner" image=page.image.url id="banner" alt="Banner" %}
+{% include components/figure.html style="banner" image=page.image.url id="banner" alt=page.image.alt caption=page.image.caption %}
 
 {% if content.size > 1 %}
 <article class="{{ page.layout }}">
