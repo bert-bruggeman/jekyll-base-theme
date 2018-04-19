@@ -1,5 +1,5 @@
 <div class="cards">
     {% for item in include.items %}
-        {% include components/card.html item=item %}
+        {% include components/card.html title=item.title content=item.content image=item.image date=item.date link=item.url %}
     {% endfor %}
 </div>
