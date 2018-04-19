@@ -1,25 +1,12 @@
 <article class="card">
 
-    {% assign item = include.item %}
-
-    {% if item.image %}
-    {% include components/image.html image=item.image.url style="card" alt=item.image.alt %}
-    {% endif %}
+    {% include components/image.html image=include.image.url style="card" alt=include.image.alt %}
 
     <div class="content">
-        <h3>{{ item.title }}</h3>
-
-        {% include components/date.html date=item.date icon="time" %}
-
-        {% if item.layout == "post" %}
-        <p>{{ item.description }}</p>
-        {% else %}
-        {% include components/content.html item=item.content %}
-        {% endif %}
-
-        {% if item.url %}
-        {% include components/link.html url=item.url class="read-more" title=site.data.vocabulary.read-more %}
-        {% endif %}
+        <h3>{{ include.title }}</h3>
+        {% include components/date.html date=include.date icon="time" %}
+        {% include components/content.html include=include.content %}
+        {% include components/link.html url=include.url class="read-more" title=site.data.vocabulary.read-more %}
     </div>
 
 </article>
