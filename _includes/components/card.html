@@ -5,7 +5,7 @@
     <div class="content">
         <h3>{{ include.title }}</h3>
         {% include components/date.html date=include.date icon="time" %}
-        {% include components/content.html include=include.content %}
+        {% include components/content.html item=include.content %}
         {% include components/link.html url=include.link class="read-more" title=site.data.vocabulary.read-more %}
     </div>
 
