@@ -1,4 +1,4 @@
-<article class="card{% if include.class %} {{ include.class }}{% endif%}">
+<article class="{% if include.class %}{{ include.class }}{% else %}card{% endif%}">
 
     {% include components/image.html image=include.image.url style="card" alt=include.image.alt %}
 
