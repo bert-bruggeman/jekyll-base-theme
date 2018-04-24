@@ -1,6 +1,6 @@
 <article class="{% if include.class %}{{ include.class }}{% else %}card{% endif%}">
-
-    {% include components/image.html image=include.image.url style="card" alt=include.image.alt %}
+    {% capture style %}{% if include.style %}{{ include.style }}{% else %}card{% endif %}{% endcapture %}
+    {% include components/image.html image=include.image.url style=style alt=include.image.alt %}
 
     <div class="content">
         <h3>{{ include.title }}</h3>
